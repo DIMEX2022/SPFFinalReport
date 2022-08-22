@@ -4,15 +4,15 @@
 # Clearing Workspace
 rm(list = ls())
 
-# Setting working directory 
-setwd('~/datadrive/dimex')
+# Setting working directory
+setwd('~/Dropbox/Github/SPFFinalReport/')
 
-# Loading source code 
-source('Code/0_Source.R')
+# Loading source code
+source('~/Dropbox/Github/SPFFinalReport/Code/CaseStudy2/0_Source.R')
 
 # Read population data
-load("Data/Processed/Population/pop_dat.RData")
-load("Data/Processed/TimeUseSurvey/tus_dat.RData")
+load("Data/CaseStudy2/Processed/Population/pop_dat.RData")
+load("Data/CaseStudy2/Processed/TimeUseSurvey/tus_dat.RData")
 
 # Suppress summarise info
 options(dplyr.summarise.inform = FALSE)
@@ -154,7 +154,7 @@ for (k in unique(pop_dat$area_id)[206:length(unique(pop_dat$area_id))]){
     dplyr::select(-c(minutes, sample))
   
   # Saving datasets 
-  save(activities_complete, file = paste('Output/Activities/activities_complete_', k, '_method1.RData', sep = ''))
+  save(activities_complete, file = paste('Output/CaseStudy2/Activities/activities_', k, '.RData', sep = ''))
   
   # Printing index
   print(k)
