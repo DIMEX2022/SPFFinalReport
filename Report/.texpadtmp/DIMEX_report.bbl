@@ -1,0 +1,500 @@
+\begin{thebibliography}{58}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+
+\bibitem[{Alan Turing Insitute}(2020)]{ATI}
+{Alan Turing Insitute}.
+\newblock {S}ynthetic population estimation and scenario projection, 2020.
+\newblock URL
+  \url{https://www.turing.ac.uk/research/research-projects/synthetic-population-estimation-and-scenario-projection}.
+
+\bibitem[An(2012)]{An2012ModelingModels}
+An, L.
+\newblock 2012.
+\newblock {Modeling human decisions in coupled human and natural systems:
+  Review of agent-based models}.
+\newblock {\em Ecological Modelling}, {\bf 229},~\penalty0 25--36.
+\newblock ISSN 0304-3800.
+\newblock doi:10.1016/J.ECOLMODEL.2011.07.010.
+
+\bibitem[Borghi \emph{et~al.}(2021)Borghi, Spinazz{\`e}, Mandaglio, Fanti,
+  Campagnolo, Rovelli, Keller, Cattaneo \& Cavallo]{borghi2021estimation}
+Borghi, Francesca, Spinazz{\`e}, Andrea, Mandaglio, Simone, Fanti, Giacomo,
+  Campagnolo, Davide, Rovelli, Sabrina, Keller, Marta, Cattaneo, Andrea \&
+  Cavallo, Domenico~Maria.
+\newblock 2021.
+\newblock Estimation of the inhaled dose of pollutants in different
+  micro-environments: a systematic review of the literature.
+\newblock {\em Toxics}, {\bf 9},~\penalty0 140.
+
+\bibitem[Burke \emph{et~al.}(2001)Burke, Zufall \&
+  {\"O}zkaynak]{burke2001population}
+Burke, J.~M., Zufall, M.~J. \& {\"O}zkaynak, H.
+\newblock 2001.
+\newblock A population exposure model for particulate matter: case study
+  results for {PM}$_{2.5}$ in {P}hiladelphia, {PA}.
+\newblock {\em Journal of Exposure Science \& Environmental Epidemiology}, {\bf
+  11},~\penalty0 470--489.
+
+\bibitem[Carlino \emph{et~al.}(2022{\natexlab{a}})Carlino, Salat \&
+  Benitez-Paez]{CarlinoRepo}
+Carlino, Dustin, Salat, Hadrien \& Benitez-Paez, Fernando.
+\newblock Synthetic population catalyst - repository, 2022{\natexlab{a}}.
+\newblock URL \url{https://github.com/alan-turing-institute/uatk-spc}.
+
+\bibitem[Carlino \emph{et~al.}(2022{\natexlab{b}})Carlino, Salat, Benitez-Paez
+  \& Malleson]{Carlino2022}
+Carlino, Dustin, Salat, Hadrien, Benitez-Paez, Fernando \& Malleson, Nick.
+\newblock The synthetic population catalyst, 2022{\natexlab{b}}.
+\newblock URL \url{https://zenodo.org/record/6588482}.
+\newblock doi:10.5281/ZENODO.6588482.
+
+\bibitem[{Copernicus}(2020)]{CAMS}
+{Copernicus}.
+\newblock {CAMS} {G}lobal {R}eanalysis ({EAC4}), 2020.
+\newblock URL
+  \url{https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-reanalysis-eac4?tab=overview}.
+
+\bibitem[Crooks \& Heppenstall(2012)]{Crooks2012IntroductionModelling}
+Crooks, A.~T. \& Heppenstall, A.~J.
+\newblock 2012.
+\newblock {Introduction to agent-based modelling}.
+\newblock {\em Agent-Based Models of Geographical Systems}, pages 85--105.
+\newblock URL
+  \url{https://link.springer.com/chapter/10.1007/978-90-481-8927-4_5}.
+\newblock doi:10.1007/978-90-481-8927-4{\_}5/TABLES/1.
+
+\bibitem[Davies(2017)]{rep_2017}
+Davies, D. S.~C.
+\newblock Annual report of the chief medical officer 2017 . health impacts of
+  all pollution. what do we know?, 2017.
+\newblock URL
+  \url{https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/690846/CMO_Annual_Report_2017_Health_Impacts_of_All_Pollution_what_do_we_know.pdf}.
+
+\bibitem[Department~for Environment \& Affairs(2022)]{AURN}
+Department~for Environment, Food \& Affairs, Rural.
+\newblock {A}utomatic {U}rban and {R}ural {N}etwork (aurn), {D}efra, {UK},
+  2022.
+\newblock URL
+  \url{https://uk-air.defra.gov.uk/networks/network-info?view=aurn}.
+
+\bibitem[{Department of Environment, Food and Rural Affairs}(2020)]{DEFRA2020}
+{Department of Environment, Food and Rural Affairs}.
+\newblock {D}aily {A}ir {Q}uality {I}ndex - defra, uk, 2020.
+\newblock URL \url{https://uk-air.defra.gov.uk/air-pollution/daqi}.
+
+\bibitem[Dominici \emph{et~al.}(2002)Dominici, Daniels, Zeger \&
+  Samet]{dominici_2002}
+Dominici, F., Daniels, M., Zeger, S. \& Samet, J.
+\newblock 2002.
+\newblock Air pollution and mortality: Estimating regional and national
+  dose-response relationships.
+\newblock {\em Journal of the American Statistical Association}, {\bf
+  97},~\penalty0 100--111.
+
+\bibitem[Dominici \emph{et~al.}(2000)Dominici, Zeger \&
+  Samet]{dominici2000measurement}
+Dominici, Francesca, Zeger, Scott~L \& Samet, Jonathan~M.
+\newblock 2000.
+\newblock A measurement error model for time-series studies of air pollution
+  and mortality.
+\newblock {\em Biostatistics}, {\bf 1},~\penalty0 157--175.
+
+\bibitem[{European Commission}(2017)]{EEAAQGs}
+{European Commission}.
+\newblock {S}tandards - {A}ir {Q}uality - {E}nvironment - {E}uropean
+  {C}ommission, 2017.
+\newblock URL \url{http://ec.europa.eu/environment/air/quality/standards.htm}.
+
+\bibitem[for Environment(2021)]{weltgesundheitsorganisation2021global}
+for Environment, World Health Organization European~Centre, 2021.
+\newblock {\em WHO global air quality guidelines: particulate matter (PM2. 5
+  and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide}.
+\newblock World Health Organization.
+
+\bibitem[Ghazi \emph{et~al.}(2014)Ghazi, Khadir \&
+  Dugdale]{Ghazi2014Multi-AgentReview}
+Ghazi, S., Khadir, T. \& Dugdale, J.
+\newblock 2014.
+\newblock {Multi-Agent Based Simulation of Environmental Pollution Issues: A
+  Review}.
+\newblock {\em Communications in Computer and Information Science}, {\bf
+  430},~\penalty0 13--21.
+\newblock ISSN 18650929.
+\newblock URL
+  \url{https://link.springer.com/chapter/10.1007/978-3-319-07767-3_2}.
+\newblock doi:10.1007/978-3-319-07767-3{\_}2/COVER/.
+
+\bibitem[Gurram \emph{et~al.}(2019)Gurram, Stuart \&
+  Pinjari]{Gurram2019Agent-basedData}
+Gurram, S., Stuart, A.~L. \& Pinjari, A.~R.
+\newblock 2019.
+\newblock {Agent-based modeling to estimate exposures to urban air pollution
+  from transportation: Exposure disparities and impacts of high-resolution
+  data}.
+\newblock {\em Computers, Environment and Urban Systems}, {\bf 75},~\penalty0
+  22--34.
+\newblock ISSN 0198-9715.
+\newblock doi:10.1016/J.COMPENVURBSYS.2019.01.002.
+
+\bibitem[Hermes \& Poulsen(2012)]{Hermes2012}
+Hermes, Kerstin \& Poulsen, Michael.
+\newblock 2012.
+\newblock A review of current methods to generate synthetic spatial microdata
+  using reweighting and future directions.
+\newblock {\em Computers, Environment and Urban Systems}, {\bf 36},~\penalty0
+  281--290.
+\newblock ISSN 01989715.
+\newblock URL
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0198971512000336}.
+\newblock doi:10.1016/j.compenvurbsys.2012.03.005.
+
+\bibitem[Institute(2022)]{UA_ATI}
+Institute, The Alan~Turing.
+\newblock Urban analytics, 2022.
+\newblock URL
+  \url{https://www.turing.ac.uk/research/research-programmes/urban-analytics}.
+
+\bibitem[Jesmin \emph{et~al.}(2012)Jesmin, Thind \& Sarma]{Jesmin2012}
+Jesmin, Shammima, Thind, Amardeep \& Sarma, Sisira.
+\newblock 2012.
+\newblock {Does team-based primary health care improve patients' perception of
+  outcomes? Evidence from the 2007-08 Canadian Survey of Experiences with
+  Primary Health}.
+\newblock {\em Health Policy}, {\bf 105},~\penalty0 71--83.
+\newblock URL \url{http://dx.doi.org/10.1016/j.healthpol.2012.01.008}.
+\newblock doi:10.1016/j.healthpol.2012.01.008.
+
+\bibitem[Johnson \emph{et~al.}(1992)Johnson, Capel, Wijnberg \&
+  McCurdy]{johnson1992estimation}
+Johnson, Ted, Capel, JE, Wijnberg, L \& McCurdy, T, 1992.
+\newblock {\em Estimation of carbon monoxide exposures and associated
+  carboxyhemoglobin levels in Denver residents using a probabilistic version of
+  NEM}.
+\newblock US Environmental Protection Agency, Office of Air Quality Planning
+  and Standards.
+
+\bibitem[Klepeis \emph{et~al.}(2001)Klepeis, Nelson, Ott, Robinson, Tsang,
+  Switzer, Behar, Hern \& Engelmann]{klepeis2001national}
+Klepeis, Neil~E, Nelson, William~C, Ott, Wayne~R, Robinson, John~P, Tsang,
+  Andy~M, Switzer, Paul, Behar, Joseph~V, Hern, Stephen~C \& Engelmann,
+  William~H.
+\newblock 2001.
+\newblock The national human activity pattern survey (nhaps): a resource for
+  assessing exposure to environmental pollutants.
+\newblock {\em Journal of Exposure Science \& Environmental Epidemiology}, {\bf
+  11},~\penalty0 231--252.
+
+\bibitem[Laden \emph{et~al.}(2000)Laden, Neas, Dockery \& Schwartz]{laden_2000}
+Laden, F., Neas, L.~M., Dockery, D.~W. \& Schwartz, J.
+\newblock 2000.
+\newblock Association of fine particulate matter from different sources with
+  daily mortality in six u.s cities.
+\newblock {\em Enviromental Health Prospectives}, {\bf 108},~\penalty0
+  941--947.
+
+\bibitem[Lomax \& Smith(2017)]{lomax2017microsimulation}
+Lomax, N.~M. \& Smith, A.~P.
+\newblock 2017.
+\newblock {A}n introduction to microsimulation for demography.
+\newblock {\em Australian Population Studies}, {\bf 1},~\penalty0 73--85.
+
+\bibitem[Lovelace \emph{et~al.}(2015)Lovelace, Birkin, Ballas \&
+  Van~Leeuwen]{lovelace2015evaluating}
+Lovelace, R., Birkin, M., Ballas, D. \& Van~Leeuwen, E.
+\newblock 2015.
+\newblock Evaluating the performance of iterative proportional fitting for
+  spatial microsimulation: new tests for an established technique.
+\newblock {\em Journal of Artificial Societies and Social Simulation}, {\bf
+  18}.
+
+\bibitem[M.~Lovelace(2016)]{LovelaceR.Dumont2016}
+M.~Lovelace, R., Dumont.
+\newblock 2016.
+\newblock Spatial microsimulation with r.
+\newblock {\em Journal of Statistical Software}, {\bf 72}.
+\newblock URL \url{https://spatial-microsim-book.robinlovelace.net/index.html}.
+\newblock doi:10.18637/jss.v072.b01.
+
+\bibitem[Macal(2017)]{Macal2017EverythingSimulation}
+Macal, C.~M.
+\newblock 2017.
+\newblock {Everything you need to know about agent-based modelling and
+  simulation}.
+\newblock {\em https://doi.org/10.1057/jos.2016.7}, {\bf 10},~\penalty0
+  144--156.
+\newblock ISSN 17477786.
+\newblock URL \url{https://www.tandfonline.com/doi/abs/10.1057/jos.2016.7}.
+\newblock doi:10.1057/JOS.2016.7.
+
+\bibitem[McGrath \emph{et~al.}(2017)McGrath, Sheahan, Dimitroulopoulou,
+  Ashmore, Terry \& Byrne]{mcgrath2017pm}
+McGrath, JA, Sheahan, JN, Dimitroulopoulou, Chrysanthi, Ashmore, MR, Terry, AC
+  \& Byrne, MA.
+\newblock 2017.
+\newblock Pm exposure variations due to different time activity profile
+  simulations within a single dwelling.
+\newblock {\em Building and Environment}, {\bf 116},~\penalty0 55--63.
+
+\bibitem[Morrissey \emph{et~al.}(2015)Morrissey, Clarke, Williamson, Daly \&
+  O'Donoghue]{morrissey2015mental}
+Morrissey, K., Clarke, G., Williamson, P., Daly, A. \& O'Donoghue, C.
+\newblock 2015.
+\newblock Mental illness in {I}reland: simulating its geographical prevalence
+  and the role of access to services.
+\newblock {\em Environment and Planning B: Planning and Design}, {\bf
+  42},~\penalty0 338--353.
+
+\bibitem[Murray \& Burmaster(1995)]{murray1995residential}
+Murray, D.~M. \& Burmaster, D.~E.
+\newblock 1995.
+\newblock {R}esidential air exchange rates in the united states: empirical and
+  estimated parametric distributions by season and climatic region.
+\newblock {\em Risk Analysis}, {\bf 15},~\penalty0 459--465.
+
+\bibitem[{Office of National Statistics}(2020)]{ONS2020}
+{Office of National Statistics}.
+\newblock {D}ataset: {A}dult smoking habits in {G}reat {B}ritain, 2020.
+\newblock URL
+  \url{https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/datasets/adultsmokinghabitsingreatbritain}.
+
+\bibitem[{\"O}zkaynak \emph{et~al.}(2013){\"O}zkaynak, B., Dionisio \&
+  Burke]{ozkaynak2013air}
+{\"O}zkaynak, H., B., Lisa~K., Dionisio, K.~L. \& Burke, J.
+\newblock 2013.
+\newblock Air pollution exposure prediction approaches used in air pollution
+  epidemiology studies.
+\newblock {\em Journal of exposure science \& environmental epidemiology}, {\bf
+  23},~\penalty0 566--572.
+
+\bibitem[{\"O}zkaynak \emph{et~al.}(1996){\"O}zkaynak, Xue, Spengler, Wallace,
+  Pellizzari \& Jenkins]{ozkaynak1996personal}
+{\"O}zkaynak, H., Xue, J., Spengler, J.~D., Wallace, L.A., Pellizzari, E.D. \&
+  Jenkins, P.
+\newblock 1996.
+\newblock {P}ersonal exposure to airborne particles and metals: results from
+  the {P}article {TEAM} study in {R}iverside, {C}alifornia.
+\newblock {\em Journal of Exposure Anahsis and Environmental Epidemiolog}, {\bf
+  6},~\penalty0 57.
+
+\bibitem[{{Parliament UK}}(2018)]{Par_report}
+{{Parliament UK}}.
+\newblock House of commons environment, food and rural affairs, environmental
+  audit, health and social care, and transport committees . improving air
+  quality, 2018.
+\newblock URL
+  \url{https://publications.parliament.uk/pa/cm201719/cmselect/cmenvfru/433/433.pdf.}
+
+\bibitem[Pope \emph{et~al.}(1995)Pope, Dockery \& Schwartz]{pope:95}
+Pope, C~Arden, Dockery, Douglas~W \& Schwartz, Joel.
+\newblock 1995.
+\newblock Review of epidemiological evidence of health effects of particulate
+  air pollution.
+\newblock {\em Inhalation toxicology}, {\bf 7},~\penalty0 1--18.
+
+\bibitem[Rosenbaum \& Rubin(1984)]{Rosenbaum1984}
+Rosenbaum, Paul~R. \& Rubin, Donald~B.
+\newblock 1984.
+\newblock {Reducing bias in observational studies using subclassification on
+  the propensity score}.
+\newblock {\em Journal of the American Statistical Association}, {\bf
+  79},~\penalty0 516--524.
+
+\bibitem[{{Royale College of Physicians}}(2016)]{RCP_rep_2016}
+{{Royale College of Physicians}}.
+\newblock Every breath we take: The lifelong impact of air pollution, 2016.
+\newblock URL
+  \url{https://www.rcplondon.ac.uk/projects/outputs/every-breath-we-take-lifelong-impact-air-pollution}.
+
+\bibitem[Schweizer \emph{et~al.}(2007)Schweizer, Edwards, Bayer-Oglesby,
+  Gauderman, Ilacqua, Juhani~Jantunen, Lai, Nieuwenhuijsen \&
+  K{\"u}nzli]{schweizer2007indoor}
+Schweizer, Christian, Edwards, Rufus~David, Bayer-Oglesby, Lucy, Gauderman,
+  William~James, Ilacqua, Vito, Juhani~Jantunen, Matti, Lai, Hak~Kan,
+  Nieuwenhuijsen, Mark \& K{\"u}nzli, Nino.
+\newblock 2007.
+\newblock Indoor time--microenvironment--activity patterns in seven regions of
+  europe.
+\newblock {\em Journal of exposure science \& environmental epidemiology}, {\bf
+  17},~\penalty0 170--181.
+
+\bibitem[Sharpe \emph{et~al.}(2018)Sharpe, Taylor, Fleming, Morrissey, Morris
+  \& Wigglesworth]{sharpe2018making}
+Sharpe, Richard~A, Taylor, Tim, Fleming, Lora~E, Morrissey, Karyn, Morris,
+  George \& Wigglesworth, Rachel.
+\newblock 2018.
+\newblock Making the case for “whole system” approaches: Integrating public
+  health and housing.
+\newblock {\em International journal of environmental research and public
+  health}, {\bf 15},~\penalty0 2345.
+
+\bibitem[Simpson \emph{et~al.}(2012)Simpson, Benedictow, Berge, Bergstr{\"o}m,
+  Emberson, Fagerli, Flechard, Hayman, Gauss, Jonson
+  \emph{et~al.}]{Simpson2012}
+Simpson, David, Benedictow, Anna, Berge, Haldis, Bergstr{\"o}m, Robert,
+  Emberson, Lisa~D, Fagerli, Hilde, Flechard, Chris~R, Hayman, Garry~D, Gauss,
+  Michael, Jonson, Jan~Eiof \emph{et~al.}
+\newblock 2012.
+\newblock The emep msc-w chemical transport model--technical description.
+\newblock {\em Atmospheric Chemistry and Physics}, {\bf 12},~\penalty0
+  7825--7865.
+
+\bibitem[Skamarock \emph{et~al.}(2019)Skamarock, Klemp, Dudhia, Gill, Liu,
+  Berner, Wang, Powers, Duda, Barker \emph{et~al.}]{Skamarock2019}
+Skamarock, William~C, Klemp, Joseph~B, Dudhia, Jimy, Gill, David~O, Liu,
+  Zhiquan, Berner, Judith, Wang, Wei, Powers, Jordan~G, Duda, Michael~G,
+  Barker, Dale~M \emph{et~al.}
+\newblock 2019.
+\newblock A description of the advanced research wrf model version 4.
+\newblock {\em National Center for Atmospheric Research: Boulder, CO, USA},
+  {\bf 145},~\penalty0 145.
+
+\bibitem[Smith \& Russell(2018)]{smith2018ukpopulation}
+Smith, A.~P. \& Russell, T.
+\newblock 2018.
+\newblock ukpopulation: unified national and subnational population estimates
+  and projections, including variants.
+\newblock {\em Journal of Open Source Software}, {\bf 3},~\penalty0 803.
+
+\bibitem[Spalt \emph{et~al.}(2016)Spalt, Curl, Allen, Cohen, Adar, Stukovsky,
+  Avol, Castro-Diehl, Nunn, Mancera-Cuevas \emph{et~al.}]{spalt2016time}
+Spalt, Elizabeth~W, Curl, Cynthia~L, Allen, Ryan~W, Cohen, Martin, Adar,
+  Sara~D, Stukovsky, Karen~H, Avol, Ed, Castro-Diehl, Cecilia, Nunn, Cathy,
+  Mancera-Cuevas, Karen \emph{et~al.}
+\newblock 2016.
+\newblock Time--location patterns of a diverse population of older adults: the
+  multi-ethnic study of atherosclerosis and air pollution (mesa air).
+\newblock {\em Journal of exposure science \& environmental epidemiology}, {\bf
+  26},~\penalty0 349--355.
+
+\bibitem[Spiekermann \& Wegener(2018)]{Spiekermann2018}
+Spiekermann, Klaus \& Wegener, Michael.
+\newblock 2018.
+\newblock Multi-level urban models: Integration across space, time and
+  policies.
+\newblock {\em Journal of Transport and Land Use}, {\bf 11},~\penalty0 67--81.
+\newblock ISSN 19387849.
+\newblock URL \url{https://www.jtlu.org/index.php/jtlu/article/view/1185}.
+\newblock doi:10.5198/jtlu.2018.1185.
+
+\bibitem[Spooner \emph{et~al.}(2021)Spooner, Abrams, Morrissey, Shaddick,
+  Batty, Milton, Dennett, Lomax, Malleson, Nelissen, Coleman, J., Y., R., C. \&
+  M.]{spooner2021dynamic}
+Spooner, F., Abrams, J.~F., Morrissey, K., Shaddick, G., Batty, M., Milton, R.,
+  Dennett, A., Lomax, N., Malleson, N., Nelissen, N., Coleman, A., J., Nurg,
+  Y., Jing, R., Greig, C., Shenton \& M., Birkin.
+\newblock 2021.
+\newblock A dynamic microsimulation model for epidemics.
+\newblock {\em Social Science \& Medicine}, {\bf 291},~\penalty0 114461.
+
+\bibitem[Sullivan \& Gershuny(2021)]{uktus}
+Sullivan, O. \& Gershuny, J.
+\newblock {U}nited {K}ingdom {T}ime {U}se {S}urvey, 2014-2015, 2021.
+\newblock URL
+  \url{https://beta.ukdataservice.ac.uk/datacatalogue/doi/?id=8128#1}.
+\newblock doi:10.5255/UKDA-SN-8128-1.
+
+\bibitem[Tanton(2013)]{Tanton2013}
+Tanton, R.
+\newblock 2013.
+\newblock A review of spatial microsimulation methods.
+\newblock {\em International Journal of Microsimulation}, {\bf 7},~\penalty0
+  4--25.
+\newblock URL \url{http://microsimulation.org/IJM/V7_1/2-IJM_7_1_Tanton_.pdf}.
+\newblock doi:10.34196/ijm.00092.
+
+\bibitem[Tanton(2017)]{Tanton2017}
+Tanton, R.
+\newblock 2017.
+\newblock Spatial microsimulation: Developments and potential future
+  directions.
+\newblock {\em International Journal of Microsimulation}, {\bf 11},~\penalty0
+  143--161.
+\newblock ISSN 17475864.
+\newblock URL \url{http://microsimulation.org/IJM/V11_1/IJM_11_1_4.pdf}.
+\newblock doi:10.34196/ijm.00176.
+
+\bibitem[Tanton(2018)]{tanton2018spatial}
+Tanton, R.
+\newblock 2018.
+\newblock Spatial microsimulation: {D}evelopments and potential future
+  directions.
+\newblock {\em International Journal of Microsimulation}, {\bf 11},~\penalty0
+  143--161.
+
+\bibitem[{US Environmental Protection Agency}(2019{\natexlab{a}})]{EPA1}
+{US Environmental Protection Agency}.
+\newblock {A}ir pollutants exposure model documentation ({APEX}, {V}ersion 5.2)
+  {V}olume {I}: user's guide, 2019{\natexlab{a}}.
+\newblock URL
+  \url{https://www.epa.gov/sites/production/files/2019-12/documents/apex52_usersguide_vol1_october2019.pdf}.
+
+\bibitem[{US Environmental Protection Agency}(2019{\natexlab{b}})]{EPA2}
+{US Environmental Protection Agency}.
+\newblock {A}ir pollutants exposure model documentation ({APEX}, {V}ersion 5.2)
+  {V}olume {II}: technical support document, 2019{\natexlab{b}}.
+\newblock URL
+  \url{https://www.epa.gov/sites/production/files/2019-12/documents/apex52_usersguide_vol2_october2019.pdf}.
+
+\bibitem[{US Environmental Protection Agency}(2020)]{EPA3}
+{US Environmental Protection Agency}.
+\newblock {S}tochastic {H}uman {E}xposure and {D}ose {S}imulation ({SHEDS}) to
+  estimate human exposure to chemicals | safer chemicals research | us epa,
+  2020.
+\newblock URL
+  \url{https://www.epa.gov/chemical-research/stochastic-human-exposure-and-dose-simulation-sheds-estimate-human-exposure}.
+
+\bibitem[Wallace \emph{et~al.}(1993)Wallace, {\"O}zkaynak, Spengler, Pellizzari
+  \& Jenkins]{wallace1993indoor}
+Wallace, L., {\"O}zkaynak, H., Spengler, J., Pellizzari, E. \& Jenkins, P.
+\newblock 1993.
+\newblock Indoor, outdoor and personal air exposures to particles, elements and
+  nicotine for 178 southern california residents.
+\newblock {\em Proceedings of Indoor Air}, {\bf 93},~\penalty0 445--450.
+
+\bibitem[{W}orld~{H}ealth {O}rganization(2005)]{world2006air}
+{W}orld~{H}ealth {O}rganization, 2005.
+\newblock {\em {A}ir {Q}uality {G}uidelines: {G}lobal {U}pdate 2005:
+  {P}articulate matter, ozone, nitrogen dioxide, and sulfur dioxide}.
+\newblock {W}orld {H}ealth {O}rganization.
+
+\bibitem[{{World Health Organization}}(2016)]{who_2016}
+{{World Health Organization}}.
+\newblock Ambient air pollution: A global assessment of exposure and burden of
+  disease, 2016.
+\newblock URL
+  \url{https://www.who.int/phe/publications/air-pollution-global-assessment/en/}.
+
+\bibitem[Zidek \emph{et~al.}(2003)Zidek, Meloche, Shaddick, Chatfield \&
+  White]{zidek2003computational}
+Zidek, J.~V., Meloche, J., Shaddick, G., Chatfield, C. \& White, R.
+\newblock 2003.
+\newblock {A} computational model for estimating personal exposure to air
+  pollutants with application to {L}ondon's {PM}$_{10}$ in 1997.
+\newblock {\em 2003 Technical Report of the Statistical and Applied
+  Mathematical Sciences Institute}.
+
+\bibitem[Zidek \emph{et~al.}(2007)Zidek, Shaddick, Meloche, Chatfield \&
+  White]{zidek2007framework}
+Zidek, J.~V., Shaddick, G., Meloche, J., Chatfield, C. \& White, R.
+\newblock 2007.
+\newblock A framework for predicting personal exposures to environmental
+  hazards.
+\newblock {\em Environmental and Ecological Statistics}, {\bf 14},~\penalty0
+  411--431.
+
+\bibitem[Zidek \emph{et~al.}(2005)Zidek, Shaddick, White, Meloche \&
+  Chatfield]{zidek2005using}
+Zidek, J.~V., Shaddick, G., White, R., Meloche, J. \& Chatfield, C.
+\newblock 2005.
+\newblock {Using a probabilistic model (pCNEM) to estimate personal exposure to
+  air pollution}.
+\newblock {\em Environmetrics}, {\bf 16},~\penalty0 481--493.
+\newblock ISSN 1099-095X.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/full/10.1002/env.716
+  https://onlinelibrary.wiley.com/doi/abs/10.1002/env.716
+  https://onlinelibrary.wiley.com/doi/10.1002/env.716}.
+\newblock doi:10.1002/ENV.716.
+
+\end{thebibliography}

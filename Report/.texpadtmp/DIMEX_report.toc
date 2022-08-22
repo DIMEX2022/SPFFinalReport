@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}Introduction}{10}{section.1}%
+\contentsline {section}{\numberline {2}Data Integration Model for EXposures (DIMEX-UK)}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Agent based modelling}{12}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Modelling framework}{14}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Synthetic Population}{16}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Activity sampler}{20}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Exposure estimation}{26}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Open micro-environments}{27}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Closed micro-environments}{28}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6}Exposure simulator}{30}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Air pollution measurement, modelling and monitoring mobility}{31}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Network of sensor deployment}{32}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}AURN and new network of air quality sensor deployment}{35}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Mobility monitoring}{37}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Integration of realtime data into the Manchester-i platform}{40}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}EMEP model configuration and simulation}{41}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Case study: Devon}{42}{section.4}%
+\contentsline {section}{\numberline {5}Case study: Greater Manchester}{47}{section.5}%
+\contentsline {section}{\numberline {6}Future Extensions}{58}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Other pollutants, and other hazards }{59}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Evaluating forecasting ahead of time}{61}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Creating spatially enriched synthetic micro-data for national multi-level modelling}{65}{subsection.6.3}%
+\contentsline {section}{\numberline {A}Appendix}{74}{appendix.A}%

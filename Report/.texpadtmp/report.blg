@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: /Users/mlt216/Dropbox/Github/SPFFinalReport/Report/.texpadtmp/report.aux
+The style file: ../mattnat.bst
+Database file #1: ../refs.bib
+Warning--I didn't find a database entry for "Torfs2008"
+You've used 58 entries,
+            2712 wiz_defined-function locations,
+            941 strings with 18626 characters,
+and the built_in function-call counts, 29203 in all, are:
+= -- 2680
+> -- 1814
+< -- 31
++ -- 679
+- -- 609
+* -- 2299
+:= -- 4969
+add.period$ -- 244
+call.type$ -- 58
+change.case$ -- 429
+chr.to.int$ -- 56
+cite$ -- 58
+duplicate$ -- 1189
+empty$ -- 2114
+format.name$ -- 685
+if$ -- 5886
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 44
+newline$ -- 366
+num.names$ -- 232
+pop$ -- 694
+preamble$ -- 1
+purify$ -- 374
+quote$ -- 0
+skip$ -- 816
+stack$ -- 0
+substring$ -- 1070
+swap$ -- 105
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 623
+warning$ -- 0
+while$ -- 233
+width$ -- 0
+write$ -- 840
+(There was 1 warning)
