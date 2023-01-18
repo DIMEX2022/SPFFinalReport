@@ -1,14 +1,9 @@
 #####################
 ### Preliminaries ###
 #####################
-# Clearing Workspace
-rm(list = ls())
-
-# Setting working directory
-setwd('~/Dropbox/Github/SPFFinalReport/')
-
 # Loading source code
-source('~/Dropbox/Github/SPFFinalReport/Code/CaseStudy2/0_Source.R')
+library(here)
+source(here("Code", "CaseStudy2", "0_Source.R"))
 
 # Read population data
 load("Data/CaseStudy2/Processed/Population/pop_dat.RData")

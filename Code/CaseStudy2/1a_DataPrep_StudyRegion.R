@@ -1,14 +1,9 @@
 #####################
 ### Preliminaries ###
 #####################
-# Clearing Workspace
-rm(list = ls())
-
-# Setting working directory
-setwd('~/Dropbox/Github/SPFFinalReport/')
-
 # Loading source code
-source('~/Dropbox/Github/SPFFinalReport/Code/CaseStudy2/0_Source.R')
+library(here)
+source(here("Code", "CaseStudy2", "0_Source.R"))
 
 #############################
 ### Reading in shapefiles ###

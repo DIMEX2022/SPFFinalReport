@@ -1,14 +1,9 @@
 #####################
 ### Preliminaries ###
 #####################
-# Clearing Workspace
-rm(list = ls())
-
-# Setting working directory
-setwd('~/Dropbox/DIMEX')
-
 # Loading source code
-source('~/Dropbox/Github/dimex/Code/0_Source.R')
+library(here)
+source(here("Code", "CaseStudy2", "0_Source.R"))
 
 # Read population data
 load("Data/Processed/Population/pop_dat.RData")
