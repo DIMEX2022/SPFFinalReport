@@ -90,8 +90,8 @@ tus_dat <- tus_dat %>%
 ### Sampling activity sequences (Method 1) - Complete sequences only ###
 ########################################################################
 # Loop for each MSOA
-for (k in unique(pop_dat$area_id)[206:length(unique(pop_dat$area_id))]){
-  # Sampling activities 
+sample_activities <- function(k) {
+  # TODO: Remove dependence on global variables, e.g. pop_dat, tus_dat
   activities_complete <- sample_population(subset(pop_dat, area_id == k), 
                                            subset(tus_dat, percmissing == 0), 
                                            nsample = 100,
@@ -147,12 +147,20 @@ for (k in unique(pop_dat$area_id)[206:length(unique(pop_dat$area_id))]){
     dplyr::filter(minutes == sample) %>%
     # Removing unecesary columns
     dplyr::select(-c(minutes, sample))
+
+  activities_complete
+}
+
+# NOTE: Parallelisation strategy is by MSOA purely for convenience
+for (key in unique(pop_dat$area_id)){
+  # Sampling activities 
+  activities_complete <- sample_activities(key)
   
   # Saving datasets 
-  save(activities_complete, file = paste('Output/CaseStudy2/Activities/activities_', k, '.RData', sep = ''))
+  save(activities_complete, file = paste('Output/CaseStudy2/Activities/activities_', key, '.RData', sep = ''))
   
   # Printing index
-  print(k)
+  print(key)
 }
 
 # Clearing Workspace
