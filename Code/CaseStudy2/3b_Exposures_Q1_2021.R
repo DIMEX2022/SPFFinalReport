@@ -34,12 +34,10 @@ rm(pm25_cams, pm25_emep)
 ############################
 ### Estimating exposures ###
 ############################
-# Loop for each MSOA
-for (k in unique(pop_dat$area_id)){
-  t1 <- Sys.time()
-  # Saving datasets 
-  load(paste('Output/CaseStudy2/Activities/activities_', k, '_2021.RData', sep = ''))
-  
+
+# TODO: remove triplication for CAMS/EMEP/5 scenarios
+# TODO: remove hard-coded date filtering
+estimate_exposures <- function(activities_complete) {
   # Parparing data for exposure modelling
   activities_complete <- activities_complete %>%
     # Only keeping specific period
@@ -72,6 +70,17 @@ for (k in unique(pop_dat$area_id)){
                                              ambient = "pm25_emep_agg", outvar = "pm25_emep_agg_hhd")
   activities_complete <- calculate_household(act_dat = activities_complete, pop_dat = pop_dat, 
                                              ambient = "pm25_five", outvar = "pm25_five_hhd")
+  activities_complete
+}
+
+# Loop for each MSOA
+for (k in unique(pop_dat$area_id)){
+  t1 <- Sys.time()
+  # Saving datasets 
+  load(paste('Output/CaseStudy2/Activities/activities_', k, '_2021.RData', sep = ''))
+
+  activities_complete <- estimate_exposures(activities_complete)  # NOTE: in-place mutation
+  
   # Saving datasets 
   save(activities_complete, file = paste('Output/CaseStudy2/Exposures/exposures_', k, '_Q1_2021.RData', sep = ''))
   
