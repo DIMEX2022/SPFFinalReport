@@ -10,50 +10,97 @@ setwd('~/Dropbox/Github/SPFFinalReport/')
 # Loading source code
 source('~/Dropbox/Github/SPFFinalReport/Code/CaseStudy2/0_Source.R')
 
-#############################
-### Reading in shapefiles ###
-#############################
+#################################
+### Preparing MSOA shapefiles ###
+#################################
 # Reading in whole UK shapefiles
-uk_full <- rgdal::readOGR(dsn = 'Data/CaseStudy2/Raw/Shapefiles', 
-                          layer = 'gadm36_GBR_0')
+uk_full <- st_read(dsn = 'Data/Raw/Shapefiles', 
+                   layer = 'gadm36_GBR_0')
 
 # import shapefile, converte to longitude/latitude coordinates and organise data
-ew_msoa <- rgdal::readOGR(dsn = "Data/CaseStudy2/Raw/Shapefiles",
-                          layer = "Middle_Layer_Super_Output_Areas_(December_2011)_Boundaries")
+ew_msoa <- st_read(dsn = "Data/Raw/Shapefiles",
+                   layer = "Middle_Layer_Super_Output_Areas_(December_2011)_Boundaries")
 
-# Getting MSOA centroids
-tmp <- as.data.frame(spTransform(gCentroid(ew_msoa, byid = TRUE), '+proj=longlat'))
-names(tmp) <- c('long', 'lat')
-ew_msoa@data <- cbind(ew_msoa@data, tmp)
+# Getting MSOA centroids in long lat format
+tmp <- ew_msoa %>%
+  # Extract
+  st_centroid(byid = TRUE) %>%
+  # Transform
+  st_transform('+proj=longlat') %>%
+  # Extract coordinates
+  st_coordinates() %>%
+  # Converting to data frame
+  as.data.frame() %>%
+  # Renaming covariates
+  dplyr::rename(long = X, lat = Y)
+
+# Adding on long/lat to original MSOAs
+ew_msoa <- cbind(ew_msoa, tmp)
 
 # Getting relevant columns
-ew_msoa@data <- ew_msoa@data[,c('msoa11cd', 'msoa11nm', 'long', 'lat')]
-names(ew_msoa) <- c('area_id', 'area_name', 'cent_long', 'cent_lat')
+ew_msoa <- ew_msoa %>%
+  dplyr::rename(area_id = msoa11cd, area_name = msoa11nm, cent_long = long, cent_lat = lat)
 
-# Getting hierarchy
-ew_msoa$parent_area_name <- NA
-for (i in 1:nrow(ew_msoa)){
-  ew_msoa$parent_area_name[i] <- substr(ew_msoa$area_name[i], 1, nchar(ew_msoa$area_name[i]) - 4)
-}
+# Adding on Local authority
+ew_msoa <- ew_msoa %>%
+  # Merging on parent_information
+  left_join(
+    # Read in data
+    read_csv('Data/Raw/Shapefiles/area_hierarchy.csv') %>%
+      # REmoving output area
+      dplyr::select(-c(OA11CD)) %>%
+      # Only keeping unique row
+      unique()  %>%
+      # Selecting relevant variables
+      dplyr::select(area_id = MSOA11CD,
+                    parent_area_name = LAD11NM,
+                    parent_area_id = LAD11CD) %>%
+      unique(),
+    by = 'area_id') 
 
-# Aggregating
-ew_msoa_region <- unionSpatialPolygons(ew_msoa, IDs = ew_msoa$parent_area_name)
 
-# Converting to SpatialPointsDataFrame
-ew_msoa_region <- as(ew_msoa_region, "SpatialPolygonsDataFrame")
+###############################
+### Preparing LA shapefiles ###
+###############################
+# Aggregating to local authority
+ew_msoa_region <- ew_msoa %>% 
+  # Aggregating
+  dplyr::group_by(parent_area_name) %>%
+  dplyr::summarise() %>%
+  dplyr::ungroup()  %>% 
+  # Adding a unique idenitifier code
+  left_join(
+    # Read in data
+    read_csv('Data/Raw/Shapefiles/area_hierarchy.csv') %>%
+      # REmoving output area
+      dplyr::select(-c(OA11CD)) %>%
+      # Only keeping unique row
+      unique()  %>%
+      dplyr::select(parent_area_name = LAD11NM,
+                    area_id = LAD11CD) %>%
+      unique(),
+    by = 'parent_area_name')%>%
+  # Renaming column 
+  dplyr::rename(area_name = parent_area_name)
 
-# Adding ID variable
-for (i in 1:nrow(ew_msoa_region)){
-  ew_msoa_region$dummy[i] <- ew_msoa_region@polygons[[i]]@ID
-}
+# Getting LA centroids in long lat format
+tmp <- ew_msoa_region %>%
+  # Extract
+  st_centroid(byid = TRUE) %>%
+  # Transform
+  st_transform('+proj=longlat') %>%
+  # Extract coordinates
+  st_coordinates() %>%
+  # Converting to data frame
+  as.data.frame() %>%
+  # Renaming covariates
+  dplyr::rename(long = X, lat = Y)
 
-# Altering column names
-names(ew_msoa_region) <- 'parent_area_name'
+# Adding on long/lat to original MSOAs
+ew_msoa_region <- cbind(ew_msoa_region, tmp)
 
-# Getting MSOA centroids
-tmp <- as.data.frame(spTransform(gCentroid(ew_msoa_region, byid = TRUE), '+proj=longlat'))
-names(tmp) <- c('_cent_long', 'cent_lat')
-ew_msoa_region@data <- cbind(ew_msoa_region@data, tmp)
-
+######################
+### Saving outputs ###
+######################
 # Save shapefiles
-save(uk_full, ew_msoa, ew_msoa_region, file = "Data/CaseStudy2/Processed/Shapefiles/shapefiles.RData")
+save(uk_full, ew_msoa, ew_msoa_region, file = "Data/Processed/Shapefiles/shapefiles.RData")
