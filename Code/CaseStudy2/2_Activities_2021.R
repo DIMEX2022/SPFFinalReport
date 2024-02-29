@@ -11,8 +11,8 @@ setwd('~/Dropbox/Github/SPFFinalReport/')
 source('~/Dropbox/Github/SPFFinalReport/Code/CaseStudy2/0_Source.R')
 
 # Read population data
-load("Data/CaseStudy2/Processed/Population/pop_dat.RData")
-load("Data/CaseStudy2/Processed/TimeUseSurvey/tus_dat.RData")
+load("Data/Processed/Population/pop_dat.RData")
+load("Data/Processed/TimeUseSurvey/tus_dat.RData")
 
 # Suppress summarise info
 options(dplyr.summarise.inform = FALSE)
@@ -95,11 +95,11 @@ tus_dat <- tus_dat %>%
 ### Sampling activity sequences (Method 1) - Complete sequences only ###
 ########################################################################
 # Loop for each MSOA
-for (k in unique(pop_dat$area_id)[206:length(unique(pop_dat$area_id))]){
+for (k in unique(pop_dat$area_id)){
   # Sampling activities 
   activities_complete <- sample_population(subset(pop_dat, area_id == k), 
                                            subset(tus_dat, percmissing == 0), 
-                                           nsample = 100,
+                                           nsample = 1,
                                            weights = "weights_diary",
                                            pop_strata = c('area_id'),
                                            tus_strata = c('sex', 'agegr4', 'nssec5', 'daytype'),
