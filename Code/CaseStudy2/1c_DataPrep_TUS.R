@@ -14,7 +14,7 @@ source('~/Dropbox/Github/SPFFinalReport/Code/CaseStudy2/0_Source.R')
 ### Reading in time  use survey ###
 ###################################
 # Reading in individual data
-uktus15_individual <- read_dta("Data/CaseStudy2/Raw/TimeUseSurvey/uktus15_individual.dta")
+uktus15_individual <- read_dta("Data/Raw/TimeUseSurvey/uktus15_individual.dta")
 
 # Preparing individual dataset
 uktus15_individual <- uktus15_individual %>%
@@ -78,7 +78,7 @@ uktus15_individual <- uktus15_individual %>%
 # Adding on occupation and socioeconomic status information
 uktus15_individual <- uktus15_individual %>%
   # Adding the Standard Occupational Classification (SOC2010 labels and codes)
-  left_join(read_csv("Data/CaseStudy2/Raw/Misc/soc2010_classification.csv") %>%
+  left_join(read_csv("Data/Raw/Misc/soc2010_classification.csv") %>%
               dplyr::select(soc2010, soc2010_label),
             by = 'soc2010') %>%
   # Tidying SOC2010 labels and setting missings as not applicable
@@ -95,7 +95,7 @@ uktus15_individual <- uktus15_individual %>%
                                         soc2010group == 9 ~ "Elementary occupations"),
          soc2010group = as.numeric(soc2010group)) %>%
   # Adding the National Statistics Socio-economic classification (NS-SEC labels and codes)
-  left_join(read_csv("Data/CaseStudy2/Raw/Misc/nssec_classification.csv") %>%
+  left_join(read_csv("Data/Raw/Misc/nssec_classification.csv") %>%
               dplyr::select(nssec, nssec_label, nssec5, nssec5_label),
             by = 'nssec') %>%
   # Tidying labels and setting missings as non employed
@@ -103,7 +103,7 @@ uktus15_individual <- uktus15_individual %>%
          nssec5 = if_else(nssec == -1, -1, nssec5),
          nssec5_label = if_else(nssec == -1, "Not applicable", nssec5_label))%>%
   # Adding the Standard Industrial Classification (SIC2007 labels and codes)
-  left_join(read_csv("Data/CaseStudy2/Raw/Misc/sic2007_classification.csv") %>%
+  left_join(read_csv("Data/Raw/Misc/sic2007_classification.csv") %>%
               dplyr::select(-c('sic3', 'sic3_label')) %>%
               unique(),
             by = 'sic2') %>%
@@ -127,7 +127,7 @@ uktus15_individual <- uktus15_individual %>%
                 sic2, sic2_label, sic1, sic1_label, sicgroup, sicgroup_label)
 
 # Reading in diary data
-uktus15_diary_wide <- read_dta("Data/CaseStudy2/Raw/TimeUseSurvey/uktus15_diary_wide.dta")
+uktus15_diary_wide <- read_dta("Data/Raw/TimeUseSurvey/uktus15_diary_wide.dta")
 
 # Preparing individual dataset
 uktus15_diary_wide <- uktus15_diary_wide %>%
@@ -177,13 +177,13 @@ uktus15_diary_wide <- uktus15_diary_wide %>%
   # Sorting dataset
   arrange(act_id, time) %>%
   # Merging on time point labels
-  left_join(read_csv("Data/CaseStudy2/Raw/TimeUseSurvey/uktus_metadata_timepoints.csv"),
+  left_join(read_csv("Data/Raw/TimeUseSurvey/uktus_metadata_timepoints.csv"),
             by = 'time') %>%
   # Merging on activity labels
-  left_join(read_csv("Data/CaseStudy2/Raw/TimeUseSurvey/uktus_metadata_activity.csv"),
+  left_join(read_csv("Data/Raw/TimeUseSurvey/uktus_metadata_activity.csv"),
             by = 'activity')%>%
   # Merging on location labels
-  left_join(read_csv("Data/CaseStudy2/Raw/TimeUseSurvey/uktus_metadata_location.csv"),
+  left_join(read_csv("Data/Raw/TimeUseSurvey/uktus_metadata_location.csv"),
             by = 'location')
 
 # Merging individual information to the diaries
@@ -207,7 +207,10 @@ tus_dat <- tus_dat %>%
                   percmissing = sum(location %in% c(-9, 0, 10, 99))/144),
             by = 'act_id')
 
+######################
+### Saving outputs ###
+######################
 # Save shapefiles
-save(tus_dat, file = "Data/CaseStudy2/Processed/TimeUseSurvey/tus_dat.RData")
+save(tus_dat, file = "Data/Processed/TimeUseSurvey/tus_dat.RData")
 
 
