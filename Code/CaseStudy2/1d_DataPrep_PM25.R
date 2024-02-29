@@ -140,7 +140,7 @@ names(Weights_msoa)[1] <- c('IDGRID')
 pm25_cams <- NULL
 
 # Loop for each date
-for (i in as.character(seq(as.Date('2020-12-01'), as.Date('2021-04-30'), by = 1))){
+for (i in as.character(seq(as.Date('2020-12-01'), as.Date('2021-07-31'), by = 1))){
   # Loop for each time
   for (j in 0:23){
     # Reading in PM25 from CAMS
