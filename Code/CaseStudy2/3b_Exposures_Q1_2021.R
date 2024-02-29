@@ -11,15 +11,15 @@ setwd('~/Dropbox/Github/SPFFinalReport/')
 source('~/Dropbox/Github/SPFFinalReport/Code/CaseStudy2/0_Source.R')
 
 # Read population data
-load("Data/CaseStudy2/Processed/Population/pop_dat.RData")
-load("Data/CaseStudy2/Processed/PM25/pm25_emep.RData")
-load("Data/CaseStudy2/Processed/PM25/pm25_cams.RData")
+load("Data/Processed/Population/pop_dat.RData")
+load("Data/Processed/PM25/pm25_emep.RData")
+load("Data/Processed/PM25/pm25_cams.RData")
 
 # Suppress summarise info
 options(dplyr.summarise.inform = FALSE)
 
 # Setting seed
-# set.seed(1409)
+set.seed(1409)
 
 # Merging pm2.5 data together
 pm25_ctm <- pm25_cams %>%
@@ -40,10 +40,10 @@ rm(pm25_cams, pm25_emep)
 ### Estimating exposures ###
 ############################
 # Loop for each MSOA
-for (k in unique(pop_dat$area_id)){
+for (k in unique(pop_dat$area_id)[1:7]){
   t1 <- Sys.time()
   # Saving datasets 
-  load(paste('Output/CaseStudy2/Activities/activities_', k, '_2021.RData', sep = ''))
+  load(paste('Output/CaseStudy2/Activities/activities_', k, '.RData', sep = ''))
   
   # Parparing data for exposure modelling
   activities_complete <- activities_complete %>%
@@ -78,7 +78,7 @@ for (k in unique(pop_dat$area_id)){
   activities_complete <- calculate_household(act_dat = activities_complete, pop_dat = pop_dat, 
                                              ambient = "pm25_five", outvar = "pm25_five_hhd")
   # Saving datasets 
-  save(activities_complete, file = paste('Output/CaseStudy2/Exposures/exposures_', k, '_Q1_2021.RData', sep = ''))
+  save(activities_complete, file = paste('Output/CaseStudy2/Exposures_Q1_2021/exposures_', k, '.RData', sep = ''))
   
   t2 <- Sys.time()
   # Printing index

@@ -33,7 +33,7 @@ pop_dat <- NULL
 # Loop for each LA
 for (i in 257:266){
   # Read in data
-  test <- read.csv(paste('Data/CaseStudy2/Raw/Population/lad_TUS_', i, '.txt', sep = ''))
+  test <- read.csv(paste('Data/Raw/Population/lad_TUS_', i, '.txt', sep = ''))
   # Appending pop_dat on
   pop_dat <- rbind(pop_dat, test)
   # Printing index
@@ -101,12 +101,12 @@ pop_dat <- pop_dat %>%
                 soc2010 = as.numeric(if_else(soc2010 == "Item not applicable", "-1", soc2010))) %>%
   # Adding the National Statistics Socio-economic classification
   # Reading and merging information on
-  left_join(read_csv("Data/CaseStudy2/Raw/Misc/nssec_classification.csv") %>%
+  left_join(read_csv("Data/Raw/Misc/nssec_classification.csv") %>%
               dplyr::select(nssec5, nssec5_label) %>%
               unique(),
             by = 'nssec5') %>%
   # Reading and merging information on
-  left_join(read_csv("Data/CaseStudy2/Raw/Misc/nssec_classification.csv") %>%
+  left_join(read_csv("Data/Raw/Misc/nssec_classification.csv") %>%
               dplyr::select(hhnssec5 = nssec5, hhnssec5_label = nssec5_label) %>%
               unique(),
             by = 'hhnssec5') %>%
@@ -117,14 +117,14 @@ pop_dat <- pop_dat %>%
          hhnssec5_label = if_else(hhnssec5 == -1, "Not applicable", hhnssec5_label)) %>%
   # Adding the Standard Occupational Classification
   # Reading and merging information on
-  left_join(read_csv("Data/CaseStudy2/Raw/Misc/soc2010_classification.csv") %>%
+  left_join(read_csv("Data/Raw/Misc/soc2010_classification.csv") %>%
               dplyr::select(soc2010, soc2010_label),
             by = 'soc2010') %>%
   # Tidying SOC2010 labels and setting missings as not applicable
   mutate(soc2010_label = if_else(is.na(soc2010_label), 'Not applicable', soc2010_label))  %>%
   # Adding the Standard Industrial Classification (SIC2007 labels and codes)
   # Reading and merging information on
-  left_join(read_csv("Data/CaseStudy2/Raw/Misc/sic2007_classification.csv") %>%
+  left_join(read_csv("Data/Raw/Misc/sic2007_classification.csv") %>%
               dplyr::select(-c('sic3', 'sic3_label')) %>%
               unique(),
             by = 'sic2')%>%
@@ -144,5 +144,8 @@ pop_dat <- pop_dat %>%
                 sic2_label, sic1, sic1_label, punknown:pmunknown, keyworker = keyworkercasa, 
                 keyworkergroup = keyworkeroccupationgroupcasa)
 
+######################
+### Saving outputs ###
+######################
 # Save shapefiles
-save(pop_dat, file = "Data/CaseStudy2/Processed/Population/pop_dat.RData")
+save(pop_dat, file = "Data/Processed/Population/pop_dat.RData")
