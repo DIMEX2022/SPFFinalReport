@@ -87,7 +87,7 @@ stations_ltn_dat <- rbind(tmp1, tmp2, tmp3, tmp4, tmp5, tmp6) %>%
 
 # Pulling all data together
 ltn_dat <- rbind(tmp1, tmp2, tmp3, tmp4, tmp5, tmp6) %>%
-  dplyr::select(date, pm2.5 = PM2.5 , site, code, hour)%>%
+  dplyr::select(date, pm2.5 = PM2.5 , site, code, hour, datetime = ds) %>%
   dplyr::mutate(pm2.5 = ifelse(pm2.5 <= 0, NA, pm2.5),
                 source = 'ltn')
 
@@ -97,11 +97,12 @@ rm(tmp1, tmp2, tmp3, tmp4, tmp5, tmp6)
 # List of Stations
 stations_aurn_dat <- importMeta(source = "aurn", all = TRUE) %>%
   filter(variable == 'PM2.5' &
-           (as.Date(end_date, format = '%Y-%m-%d') >= as.Date('2020-12-01') |
+           (as.Date(start_date, format = '%Y-%m-%d') <= as.Date('2021-12-31')) &
+           (as.Date(end_date, format = '%Y-%m-%d') >= as.Date('2020-01-01') |
               end_date == 'ongoing') &
            longitude > (st_bbox(mcr_msoa)[1] - 0.5) &
-           longitude < (st_bbox(mcr_msoa)[2] + 0.5) &
-           latitude > (st_bbox(mcr_msoa)[3] - 0.5) &
+           longitude < (st_bbox(mcr_msoa)[3] + 0.5) &
+           latitude > (st_bbox(mcr_msoa)[2] - 0.5) &
            latitude < (st_bbox(mcr_msoa)[4] + 0.5)) %>%
   dplyr::select(code, site, latitude, longitude) %>%
   unique() %>%
@@ -114,18 +115,24 @@ aurn_dat <- importAURN(site = stations_aurn_dat$code,
                        meta = FALSE,
                        data_type = 'hourly',
                        verbose = FALSE) %>%
-  # Removing negative values
-  dplyr::mutate(pm2.5 = ifelse(pm2.5 <= 0, NA, pm2.5)) %>%
+  # Altering columns 
+  dplyr::mutate(
+    # Removing negative values
+    pm2.5 = ifelse(pm2.5 <= 0, NA, pm2.5),
+    # Adding hour
+    hour = if_else(is.na(as.numeric(substr(date, 12, 13))),
+                   0, as.numeric(substr(date, 12, 13))),
+    # Keeping datetime
+    datetime = date,
+    # Adding just the date
+    date = as.Date(substr(date, 1, 10))) %>%
   # Dropping unecessary columns
   dplyr::select(-c(ws, wd, air_temp))
-
-# Getting date and hour
-aurn_dat$hour <- as.numeric(substr(aurn_dat$date, 12, 13))
-aurn_dat$date <- as.Date(substr(aurn_dat$date, 1, 10))
 
 # Appenidng both together
 gm_dat <- rbind(aurn_dat, ltn_dat)
 stations_gm_dat <- rbind(stations_aurn_dat, stations_ltn_dat)
+
 
 #################################################
 ### Aggregating to MSOA and bringing together ###
@@ -198,7 +205,7 @@ tmp2 <- NULL
 tmp3 <- NULL
 
 # Loop for each date
-for (i in as.character(seq(as.Date('2020-12-01'), as.Date('2021-04-30'), by = 1))){
+for (i in as.character(seq(as.Date('2020-12-01'), as.Date('2021-07-31'), by = 1))){
   # Loop for each time
   for (j in 0:23){
     # Getting stations with non-missing data
@@ -272,8 +279,8 @@ pm25_gm <- pm25_gm %>%
             by = c('area_id', 'date', 'hour'))
 
 # Removing unecessary files
-rm(tmp1, tmp2, tmp3, aurn_dat, gm_dat, ltn_dat, mcr_msoa,
-   stations_aurn_dat, stations_gm_dat, stations_ltn_dat)
+rm(tmp1, tmp2, tmp3, aurn_dat, ltn_dat, mcr_msoa,
+   stations_aurn_dat, stations_ltn_dat)
 
 ######################
 ### Saving outputs ###
@@ -284,3 +291,11 @@ save(stations_gm_dat, file = "Data/Processed/PM25/GroundMonitoring/pm25_aurn_met
 
 # Save aurn data on MSOA level
 save(pm25_gm, file = "Data/Processed/PM25/pm25_gm.RData")
+
+
+
+
+
+
+
+
