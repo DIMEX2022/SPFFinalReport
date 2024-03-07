@@ -11,7 +11,7 @@ setwd('~/Dropbox/Github/SPFFinalReport/')
 source('~/Dropbox/Github/SPFFinalReport/Code/CaseStudy2/0_Source.R')
 
 # Read population data
-load("Data/CaseStudy2/Processed/Population/pop_dat.RData")
+load("Data/Processed/Population/pop_dat.RData")
 
 ############################
 ### Estimating exposures ###
