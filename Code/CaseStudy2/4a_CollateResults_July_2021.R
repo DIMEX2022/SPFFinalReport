@@ -11,7 +11,7 @@ setwd('~/Dropbox/Github/SPFFinalReport/')
 source('~/Dropbox/Github/SPFFinalReport/Code/CaseStudy2/0_Source.R')
 
 # Read population data
-load("Data/CaseStudy2/Processed/Population/pop_dat.RData")
+load("Data/Processed/Population/pop_dat.RData")
 
 ############################
 ### Estimating exposures ###
@@ -32,15 +32,15 @@ for (k in unique(pop_dat$area_id)[1:173]){
     dplyr::mutate(exposure_aurn = ifelse(micro_group == "outdoor", pm25_aurn_near,
                                          ifelse(micro_group == "indoor", pm25_aurn_near_inh,
                                                 ifelse(micro_group == "transport", pm25_aurn_near_tns,
-                                                       ifelse(micro_group == "home", pm25_aurn_near_hsh, NA)))),
+                                                       ifelse(micro_group == "home", pm25_aurn_near_hhd, NA)))),
                   exposure_ltn = ifelse(micro_group == "outdoor", pm25_ltn_near,
                                         ifelse(micro_group == "indoor", pm25_ltn_near_inh,
                                                ifelse(micro_group == "transport", pm25_ltn_near_tns,
-                                                      ifelse(micro_group == "home", pm25_ltn_near_hsh, NA)))),
+                                                      ifelse(micro_group == "home", pm25_ltn_near_hhd, NA)))),
                   exposure_gm = ifelse(micro_group == "outdoor", pm25_gm_near,
                                        ifelse(micro_group == "indoor", pm25_gm_near_inh,
                                               ifelse(micro_group == "transport", pm25_gm_near_tns,
-                                                     ifelse(micro_group == "home", pm25_gm_near_hsh, NA)))))%>%
+                                                     ifelse(micro_group == "home", pm25_gm_near_hhd, NA)))))%>%
     # Averaging by day
     ddply(.(area_id, pop_id, date, daytype, daytype_label, season, season_label,
             sex, sex_label, agegr4, agegr4_label, nssec5, nssec5_label),
